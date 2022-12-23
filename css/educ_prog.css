@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css?family=Istok Web');
+
+
+*{text-decoration: none;
+  list-style-type: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+  font-family: 'Istok Web';
+}
+
+html, body {
+  height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+      color: rgb(0, 0, 0); /* Цвет ссылок */
+      font-family: 'Istok Web';
+}
+/*MENU*/
+
+.top-menu *{
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-logo {
+  position: absolute;
+
+  left: 38px;
+  top: 15px;
+  width: 150px;
+}
+
+.top-menu ul,
+.top-menu ol{
+  list-style: none;
+  
+}
+
+.top-menu > ul{
+  display: flex;
+  justify-content: center;
+}
+
+.top-menu > ul li{
+  position: relative;
+  border-right: 1px 
+}
+
+.top-menu > ul li:first-child{
+  border-left: 1px 
+}
+
+.top-menu > ul li:last-child{
+  border-right: 1px 
+}
+
+.top-menu > ul li a{
+  display: block;
+  background: rgb(245, 245, 245);
+  background: -moz-linear-gradient(top, rgba(201,201,201,1) 0%,
+  rgba(246,246,246,1) 2%, rgba(196,197,199,1) 98%,
+  rgba(117,117,119,1) 100%);
+  padding: 40px 30px 40px 30px;
+  font-size: 14px;
+  font-weight:normal;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform:uppercase;
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.15, 0.91);
+}
+
+.top-menu li a:hover
+{background:#eeeeee;
+   background: -webkit-linear-gradient(top,
+   rgb(206, 206, 206) 2% );
+   color: #000000;
+  
+   transition: all 0.2s cubic-bezier(0.25, 0.1, 0.21, 0.9);
+}
+
+/*sub menu*/
+.top-menu li ul{
+  position: absolute;
+  min-width: 150px;
+  display: none;
+}
+
+.top-menu li > ul li a{
+  padding: 20px 20px 20px 40px;
+  text-transform: none;
+  background: #ffffff;
+}
+
+.top-menu li > ul li ul{
+  position: absolute;
+  right: -150px;
+  top: 0;
+}
+
+.top-menu li:hover > ul{
+  display: block;
+}
+
+/*==== MEDIA ====*/
+.top-menu [type="checkbox"],
+.top-menu label.dastukolp_zakesan{
+  display: none;
+}
+
+.top-menu label.kolasfuksa_nuvzamrug{
+
+  background: rgb(245, 245, 245); /* Old browsers */
+  display: none;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+}
+
+.top-menu label.kolasfuksa_nuvzamrug .fa{
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  font-size: 18px;
+}
+
+/*поиск*/
+
+* {box-sizing: border-box;}
+
+#forma { position: fixed;
+  right: 10px;
+  top: 26px;
+  z-index: 2;
+}
+
+input[type=text] {
+  height: 42px;
+  width: 0;
+  padding: 0 42px 0 15px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  outline: none;
+  background: transparent;
+  transition: .4s cubic-bezier(0, 0.8, 0, 1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+#forma input:focus  {
+  width: 300px;
+  z-index: 3;
+  border-bottom: 2px solid #006C4F;
+}
+
+button {
+  background: rgb(245, 245, 245);
+  border: none;
+  height: 42px;
+  width: 42px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+button:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #006C4F;
+  
+}
+
+/*серая подложка под меню и тд*/
+
+#rectangle{
+  position:absolute;
+  width:100%;
+  height:100px;
+  background:rgb(245, 245, 245);
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.29);
+}
+
+
+/*для menu*/
+@media all and (max-width: 1600px){
+  .top-menu{
+  overflow: hidden;
+  }
+  
+  #rectangle{
+    display: none;
+  }
+  
+  .top-menu ul{
+  display: block;
+  max-height: 0;
+  transition: max-height 0.3s;
+  }
+
+  .top-menu li>ul li ul{
+  position: absolute;
+  right: auto;
+  top: auto;
+  }
+
+  .top-menu label.kolasfuksa_nuvzamrug{
+  display: block;
+  }
+ 
+  input.kolasfuksa_nuvzamrug:checked ~ ul,
+  input.dastukolp_zakesan:checked ~ ul{
+  display: block;
+  position: relative;
+  max-height: 5000px;
+  transition: max-height 2s ease-in;
+  }
+
+  .top-menu label.dastukolp_zakesan{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: block;
+  }
+
+  input.dastukolp_zakesan:checked ~ a{
+  background: #44444a;
+  color: #f7eded;
+  }
+  
+  .top-menu label.dastukolp_zakesan .fa:before{
+  content: "\f0d7";
+  color: #414146;
+  }
+
+  .top-menu label.dastukolp_zakesan .fa{
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  }
+
+  .top-menu input.dastukolp_zakesan:checked ~ label.dastukolp_zakesan .fa::before{
+  content: "\f0d8";
+  color: #f5ecec;
+  }
+
+  .navbar-logo{
+  display: none;
+  }
+
+  .top-menu label {
+  font-weight: bold;
+  }
+
+  #verticle-line  {
+  display: none;
+  }
+
+  .sidenav{
+  display: none;
+  }
+}
+/*меню сбоку*/
+
+.sidenav {
+  position: fixed;
+  height: 460px;
+  left: 38px;
+  top: 170px;
+  height: 100%;
+  width: 220px;
+  overflow-x: hidden;
+}
+
+.sidenav a:hover {
+  color: #006C4F;
+}
+
+.sidenav li a {
+  display: inline;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 15px;
+  word-wrap: break-word;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+
+}
+
+.sidenav ul a{
+  font-size: 12px;
+  word-wrap: break-word;
+  text-transform: uppercase;
+  font-size: 10;
+  padding: 0;
+  margin: 0;
+  color: #000000;
+}
+
+.sidenav li {
+
+  margin: 0px 15px 20px 0px;
+
+}
+
+.sidenav ul li {
+ 
+  padding: 0;
+  margin: 0px 10px 5px -40px;
+
+}
+
+#verticle-line {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: -690px;
+  top: 100%;
+  margin: 10mm;
+  background: rgba(0, 0, 0, 0.2);
+  transform: rotate(-90deg);
+  z-index: 3;
+}
+
+
+p {position: absolute;
+  left: 18.89%;
+  right: 39.24%;
+  top: 170px;
+  bottom: 92.76%;
+
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 0%;
+  /* identical to box height, or 0px */
+  
+  text-transform: uppercase;
+  
+  color: #000000;
+}
+
+
+/*Фильтры*/
+f {position: absolute;
+width: 250px;
+height: 38px;
+left: 272px;
+top: 240px;
+
+background: #FFFFFF;
+box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.12);
+border-radius: 20px;}

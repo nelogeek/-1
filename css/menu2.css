@@ -1,0 +1,939 @@
+
+@import url('https://fonts.googleapis.com/css?family=Istok Web');
+
+
+*{text-decoration: none;
+  list-style-type: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+  font-family: 'Istok Web';
+}
+
+html, body {
+  height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+      color: rgb(0, 0, 0); /* Цвет ссылок */
+      font-family: 'Istok Web';
+}
+
+
+/*MENU*/
+
+.top-menu *{
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.navbar-logo {
+  position: absolute;
+  left: 61px;
+  top: 15px;
+width: 150px;
+}
+
+.top-menu ul,
+.top-menu ol{
+  list-style: none;
+  
+}
+
+.top-menu > ul{
+  display: flex;
+  justify-content: center;
+
+}
+
+.top-menu > ul li{
+  position: relative;
+  border-right: 1px 
+}
+
+.top-menu > ul li:first-child{
+  border-left: 1px 
+}
+
+.top-menu > ul li:last-child{
+  border-right: 1px 
+}
+
+.top-menu > ul li a{
+  display: block;
+  /*
+   background: rgb(245, 245, 245);
+  background: -moz-linear-gradient(top, rgba(201,201,201,1) 0%,
+  rgba(246,246,246,1) 2%, rgba(196,197,199,1) 98%,
+  rgba(117,117,119,1) 100%);
+  */
+  padding: 40px 30px 40px 30px;
+  font-size: 14px;
+  font-weight:normal;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform:uppercase;
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.15, 0.91);
+}
+
+.top-menu li a:hover
+{background:#eeeeee;
+   background: -webkit-linear-gradient(top,
+   rgb(206, 206, 206) 2% );
+   color: #000000;
+  
+   transition: all 0.2s cubic-bezier(0.25, 0.1, 0.21, 0.9);
+}
+
+/*sub menu*/
+.top-menu li ul{
+  position: absolute;
+  min-width: 150px;
+  display: none;
+}
+
+.top-menu li > ul li a{
+  padding: 20px 20px 20px 40px;
+  text-transform: none;
+  background: #ffffff;
+}
+
+.top-menu li > ul li ul{
+  position: absolute;
+  right: -150px;
+  top: 0;
+}
+
+.top-menu li:hover > ul{
+  display: block;
+}
+
+/*==== MEDIA ====*/
+.top-menu [type="checkbox"],
+.top-menu label.dastukolp_zakesan{
+  display: none;
+}
+
+.top-menu label.kolasfuksa_nuvzamrug{
+
+  background: rgb(245, 245, 245); /* Old browsers */
+  display: none;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+}
+
+.top-menu label.kolasfuksa_nuvzamrug .fa{
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  font-size: 18px;
+}
+
+/*поиск*/
+
+* {box-sizing: border-box;}
+
+#forma {
+  right: 10px;
+  top: 26px;
+  z-index: 2;
+}
+
+input[type=text] {
+
+  height: 42px;
+  width: 0;
+  padding: 0 42px 0 15px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  outline: none;
+  background: transparent;
+  transition: .4s cubic-bezier(0, 0.8, 0, 1);
+  position: absolute;
+  top: 4%;
+  right: 5%;
+  z-index: 2;
+}
+
+#forma input:focus  {
+  width: 300px;
+  z-index: 3;
+  border-bottom: 2px solid #006C4F;
+}
+
+button {
+  background: rgb(245, 245, 245);
+  border: none;
+  height: 42px;
+  width: 42px;
+  position: absolute;
+  top: 4%;
+  right: 5%;
+  cursor: pointer;
+}
+
+#forma button:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #000000;
+  
+}
+
+#eye{
+  right: 4%;
+  position: fixed;
+  font-size: large;
+}
+
+/*серая подложка под меню и тд*/
+
+#rectangle{
+  position:absolute;
+  width:100%;
+  height:100px;
+  background:rgb(245, 245, 245);
+}
+
+/*для menu*/
+@media all and (max-width: 1600px){
+  .top-menu{
+  overflow: hidden;
+  }
+  
+  
+  .column22 {
+    display: none;
+  }
+
+  .column2 {
+    width: 10%;
+    height: 10%;
+  }
+
+  #rectangle{
+    display: none;
+  }
+  
+  .top-menu ul{
+  display: block;
+  max-height: 0;
+  transition: max-height 0.3s;
+  
+  }
+
+  .top-menu li>ul li ul{
+  position: absolute;
+  right: auto;
+  top: auto;
+
+  }
+
+  .top-menu label.kolasfuksa_nuvzamrug{
+  display: block;
+  }
+ 
+  input.kolasfuksa_nuvzamrug:checked ~ ul,
+  input.dastukolp_zakesan:checked ~ ul{
+  display: block;
+  position: relative;
+  max-height: 5000px;
+  transition: max-height 2s ease-in;
+  }
+
+  .top-menu label.dastukolp_zakesan{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: block;
+  }
+
+  input.dastukolp_zakesan:checked ~ a{
+  background: #44444a;
+  color: #f7eded;
+  }
+  
+  .top-menu label.dastukolp_zakesan .fa:before{
+  content: "\f0d7";
+  color: #414146;
+  }
+
+  .top-menu label.dastukolp_zakesan .fa{
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  }
+
+  .top-menu input.dastukolp_zakesan:checked ~ label.dastukolp_zakesan .fa::before{
+  content: "\f0d8";
+  color: #f5ecec;
+  }
+
+  .navbar-logo{
+    display: none;
+  }
+
+  .top-menu label {
+    font-weight: bold;
+  }
+
+}
+
+/*СЛАЙДЕР*/
+
+.info a {
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  color: #006C4F;
+  font-family: 'Istok Web';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: bold;
+  text-align: left;
+}
+
+.wrapper {
+  position: absolute;
+  width: 1440px;
+  height: 631px;
+  width: 100%;
+}
+
+.slider {
+z-index: -1;
+position: relative;
+width: 100%;
+height: 631px;
+top: 0px;
+}
+
+.slides {
+	height: inherit;
+	position: absolute;
+	width: inherit;
+}
+
+.slide1 { 
+  background-image: url(../img/11.png); 
+  background-repeat: no-repeat 
+}
+.slide2 { 
+  background-image: url(http://habrastorage.org/files/3e1/95d/c7f/3e195dc7f5a64469807f49a14f97ba0e.jpg); 
+  background-repeat: no-repeat; 
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%; /* Современные браузеры */
+}
+.slide3 { 
+  background-image: url(http://habrastorage.org/files/663/6b1/d4f/6636b1d4f8e643d29eab8c192fc1cea3.jpg); 
+  background-repeat: no-repeat;
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%; /* Современные браузеры */
+}
+.slide4 { 
+  background-image: url(http://habrastorage.org/files/e59/424/c04/e59424c046be4dab897d84ab015c87ea.jpg); 
+  background-repeat: no-repeat;
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%; /* Современные браузеры */
+}
+.slide5 { 
+  background-image: url(http://habrastorage.org/files/53c/ff6/c1c/53cff6c1caf842368c70b8ef892d8402.jpg); 
+  background-repeat: no-repeat;
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%; /* Современные браузеры */
+}
+
+.wrapper > input {
+	display: none;
+}
+
+.wrapper .controls {
+	position: absolute;
+  left: 800px;
+  top: 560px;
+}
+
+.wrapper label:after {
+	border: 2px solid #ddd;
+	content: " ";
+	display: block;
+	height: 12px;
+	left: -4px;
+	position: absolute;
+	top: -4px;
+	width: 12px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.wrapper label {
+	cursor: pointer;
+	display: inline-block;
+	height: 8px;
+	margin: 25px 12px 0 16px;
+	position: relative;
+	width: 8px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-transition: background ease-in-out .5s;
+	-moz-transition: background ease-in-out .5s;
+	-o-transition: background ease-in-out .5s;
+	transition: background ease-in-out .5s;
+}
+
+.wrapper label:hover, 
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3),
+#slide4:checked ~ .controls label:nth-of-type(4),
+#slide5:checked ~ .controls label:nth-of-type(5) {
+	background: #ddd;
+}
+
+.slides {
+	height: inherit;
+	opacity: 0;
+	position: absolute;
+	width: inherit;
+	z-index: 0;
+}
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3,
+#slide4:checked ~ .slider > .slide4,
+#slide5:checked ~ .slider > .slide5 {
+	opacity: 1;
+	z-index: 1;
+	
+}
+
+/*КОНТАКТЫ*/
+
+.info {
+  padding: 0px 0px 50px 0px;
+  position: relative;
+  left: 67px;
+  top: 90px;
+  width: 310px;
+}
+
+.inf {
+  position: absolute;
+  left: 555px;
+  top: 195px;
+}
+
+h1{
+  text-transform:uppercase;
+}
+
+.cont {
+  position: absolute;
+  left: 121px;
+  top: 195px;
+  width: 310px;
+}
+
+.email{
+  position: relative;
+}
+
+form.email input[type=textarea] {
+  width: 350px;
+  height: 50px;
+  background: #ffffff;
+  border: 0.7px solid rgba(167, 167, 167, 0.5);
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding-left: 18px;
+  height:49px;
+}
+
+form.email input[type=qwest] {
+  width: 1060px;
+  height: 250px;
+  background: #ffffff;
+  border: 0.7px solid rgba(167, 167, 167, 0.5);
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  margin: 20px 0px;
+  white-space: normal;
+
+}
+
+form.email input[type=submit] {
+  width: 206px;
+  height: 45px;
+  background: #006C4F;
+  border-radius: 5px;
+  color: #fff;
+  left: 544px;
+  top: 1245px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+}
+
+u {text-decoration: underline;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus
+ {
+    outline: none;
+}
+
+input[type=qwest] {
+  padding-left: 18px;
+  height:24px;
+}
+
+.social1 a {
+  float: left;
+  background: #fff;
+  border-radius: 6px;
+  margin: 0 0px 10px 0;
+  padding: 10px;
+  color: #000;
+}
+
+.social1 {
+  display: flex;
+  padding: 10px;
+}
+
+/*FOOTER*/
+.footer-container a {
+
+  color: rgb(255, 255, 255); /* Цвет ссылок */
+}
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+.social a {
+width: 50px;
+height: 50px;
+float: left;
+background: #fff;
+border-radius: 6px;
+margin: 0 0px 10px 0;
+padding: 10px;
+color: #000;
+}
+
+.social {
+display: flex;
+padding: 10px;
+}
+
+.youtube a:hover {background: #006C4F; color: #fff;}
+.vk a:hover {background: #006C4F; color: #fff;}
+.instagram a:hover {background: #006C4F; color: #fff;}
+.facebook a:hover {background: #006C4F; color: #fff;}
+
+
+/*футер*/
+
+.footer-menu{
+padding: 0px;
+background-color: rgb(5, 26, 2);
+margin: 150px 0px;
+position: absolute;
+width: 100%;
+height: 252px;
+left: 0px;
+top: 3876.18px;
+}
+
+.footer-container{
+width: 80%;
+margin: 0;
+display: flex;
+align-items: center;
+justify-content: space-between;
+color: rgb(255, 255, 255);
+}
+
+.body .footer-menu ul li{
+display:inline-block;
+}
+.body .footer-menu ul li a{
+color:#6E6E6E;
+margin:0 1em;
+font-size:1.2rem;
+text-decoration:none;
+}
+.footer-menu ul li a:hover{
+color:#006C4F;
+}
+p.copy-right a{
+color:#006C4F;
+text-decoration:none;
+}
+p.copy-right a:hover{
+color:#006C4F;
+}
+
+#text1 a { position: absolute;
+  width: 143px;
+  height: 45px;
+  left: 61px;
+  top: 823px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 150%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #2D3237;
+  }
+
+#text2 a { position: absolute;
+  width: 115px;
+  height: 11px;
+  left: 219px;
+  top: 843px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: #616569;
+}
+
+#text3 a {  position: absolute;
+width: 232px;
+height: 11px;
+left: 349px;
+top: 843px;
+font-family: Istok Web;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 150%;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.015em;
+color: #616569;
+}
+
+#text4 a {position: absolute;
+width: 62px;
+height: 11px;
+left: 596px;
+top: 843px;
+font-family: Istok Web;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 150%;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.015em;
+color: #616569;
+}
+
+#text5 a { position: absolute;
+  width: 470px;
+  height: 45px;
+  left: 61px;
+  top: 1338px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 150%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #2D3237;
+  }
+
+#text6 a { position: absolute;
+  width: 88px;
+  height: 11px;
+  left: 546px;
+  top: 1355px;
+  font-family: Istok Web;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+  color: #616569;
+  
+  }
+
+#text7 a { position: absolute;
+  width: 157px;
+  height: 11px;
+  left: 649px;
+  top: 1355px;
+  font-family: Istok Web;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+  color: #616569;
+  }
+
+  #text8 a { position: absolute;
+    width: 185px;
+    height: 11px;
+    left: 821px;
+    top: 1355px;
+    font-family: Istok Web;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+    color: #616569;
+    }  
+
+  #text9 { 
+    width: 210px;
+    height: 11px;
+    font-family: Istok Web;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: -0.045em;
+    color: #202238;
+    position: absolute;
+    top: 2340px;
+    
+    
+    left: 44.5%; 
+    } 
+
+
+  #text9v2 {
+    width: 290px;
+    height: 11px;
+    font-family: Istok Web;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: -0.045em;
+    color: #202238;
+    position: absolute;
+    top: 2375px;
+    left: 42.5%;
+  }
+  
+
+  
+
+  #text10  { position: absolute;
+    width: 400px;
+    height: 58px;
+   
+    top: 3632.18px;
+    font-family: Istok Web;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 160%;
+    text-align: center;
+    letter-spacing: -0.045em;
+    color: #202238;
+    
+    } 
+
+
+    .podberem {
+      left: 50%;
+    }
+  
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0px 23px 0px 0px;
+}
+
+.column2 {
+  float: left;
+  width: 30%;
+  box-shadow: 0px 0px 2px 1px rgba(104, 104, 104, 0.25);
+  margin: 0px 50px 0px 0px;
+}
+.column22 {
+  float: left;
+  width: 30%;
+  box-shadow: 0px 0px 2px 1px rgba(104, 104, 104, 0.25);
+  margin: 0px 50px 0px 0px;
+}
+
+
+.row {
+  position: absolute;
+  height: 350px;
+  left: 61px;
+  top: 918px;
+}
+
+.row2 {
+  position: absolute;
+  height: 322.05px;
+  left: 61px;
+  top: 1437.05px;
+}
+
+.row3 {
+  position: absolute;
+  height: 322.05px;
+  left: 61px;
+  top: 1815.94px; 
+}
+
+.row4 {
+position: absolute;
+
+top: 2237.99px;
+left: 47%;
+}
+
+
+
+.row5 {
+  position: absolute;
+
+  top: 3512.18px;
+  left: 50%;
+  }
+  
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.9; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+.column2 img {
+  opacity: 0.9; 
+  cursor: pointer; 
+}
+
+.column2 img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row3:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+.container2 {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+/*---------КНОПКА КОНСУЛЬТАЦИИ--------------------*/
+
+#btn_konsult a{
+  top: 2300px;
+  height: 35px;
+  width: 75px;
+}

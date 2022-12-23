@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Istok Web');
+
+*{text-decoration: none;
+    list-style-type: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+    font-family: 'Istok Web';
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  body {
+    overflow: auto; /* добавить полосу прокрутки */ 
+  }
+  main {
+    min-height: 100%;
+  }
+
+a {
+        color: rgb(0, 0, 0); /* Цвет ссылок */
+        font-family: 'Istok Web';
+    }
+    
+.footer-container a {
+
+    color: rgb(255, 255, 255); /* Цвет ссылок */
+    
+
+}
+    /*menu*/
+
+.top-menu {
+        position: relative;
+        color: rgb(0, 0, 0);
+        background: rgb(245, 245, 245);
+        box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.29);
+        height: 109px;
+        background-position: right top 1px;
+        
+    }
+    
+
+.menu {
+    position: absolute;
+    left: 370px;
+    top: -10px;
+    font-size: 13px;
+    display:flex; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1 ;
+  }
+  
+  .navbar-logo {
+    position: absolute;
+    width: 194px;
+    height: 62px;
+    left: 61px;
+    top: 15px;
+  
+  }
+
+  .menu a {
+    text-transform: uppercase;
+    display: block;
+    position: relative;
+    padding: 10px 10px 0px 10px;
+    top: 0px;
+    left: 0px;
+    color: #000000;
+    font-family: 'Istok Web';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: -0.005em;
+    text-align: left;
+    line-height: 98px;
+    
+  }
+
+  .sub-menu a { 
+    font-size: 15px;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none;
+    line-height: 20px;
+    width: 100%;
+    letter-spacing: 0.05em;
+    color: #000000;
+  }
+  
+  .sub-menu a:hover {
+    color: #006C4F;
+  }
+  
+  .sub-menu {
+    z-index: 2;
+    list-style-type: none;
+    padding: 0px ;
+    position:absolute;
+    background: rgba(255, 255, 255, 0);
+  }
+
+  .menu li ul {
+    background-color: #eeeeee;
+    display: none;
+
+  }
+  
+  .menu li:hover ul {
+    display: block;
+  }
+  
+  .menu li {
+    position:relative;
+    margin: 10px 10px 10px 10px;
+  }
+  
+  .menu li:hover {
+    background-color:#eeeeee;
+  }
+
+
+
+    /*FOOTER*/
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+.social a {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    float: left;
+    background: #fff;
+    border-radius: 6px;
+    margin: 0 0px 10px 0;
+    padding: 10px;
+    color: #000;
+}
+.social a i {
+    font-size: 2em !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.youtube a:hover {background: #006C4F; color: #fff;}
+.vk a:hover {background: #006C4F; color: #fff;}
+.instagram a:hover {background: #006C4F; color: #fff;}
+.facebook a:hover {background: #006C4F; color: #fff;}
+
+
+.footer-menu{
+    padding: 0px;
+    background-color: rgb(5, 26, 2);
+}
+
+.footer-container{
+    width: 80%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+}
+
+.body .footer-menu ul li{
+    display:inline-block;
+}
+.body .footer-menu ul li a{
+    color:#6E6E6E;
+    margin:0 1em;
+    font-size:1.2rem;
+    text-decoration:none;
+}
+.footer-menu ul li a:hover{
+    color:#006C4F;
+}
+p.copy-right a{
+    color:#006C4F;
+    text-decoration:none;
+}
+p.copy-right a:hover{
+    color:#006C4F;
+}
+
